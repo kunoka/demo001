@@ -5,33 +5,22 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const linearGradient = const LinearGradient(
-                      colors: [
-                        Colors.lightBlue,
-                        Colors.greenAccent,
-                        Colors.purple
-                      ]);
-        return MaterialApp(
-            title: 'TextWidget',
-            home: Scaffold(
-                appBar: AppBar(
-                  title: Text('TextWidget'),
-                ),
-                body: Center(
-                    child: Container(
-                  child: new Text(
-                    'Hello Imooc',
-                    style: TextStyle(fontSize: 40.0),
+    return MaterialApp(
+        title: 'TextWidget',
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text('TextWidget'),
+            ),
+            body: Center(
+                child: Container(
+                  child: new Image.network(
+                    'http://img4.mukewang.com/szimg/5d25400a08fa408c06000338-360-202.jpg',
+                    scale: 2.0,
+                    repeat: ImageRepeat.repeatY,
                   ),
-                  alignment: Alignment.topLeft,
-                  width: 500.0,
-                  height: 400.0,
-                  // color: Colors.lightBlue,
-                  margin: const EdgeInsets.all(10.0),
-                  decoration: new BoxDecoration(
-                    gradient: linearGradient
-              ),
-            )
+                  width: 400.0,
+                  height: 300.0,
+                  color: Colors.lightBlue,)
             )));
   }
 }
