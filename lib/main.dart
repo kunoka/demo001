@@ -5,22 +5,33 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'TextWidget',
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text('TextWidget'),
-            ),
-            body: Center(
-                child: Container(
-              child: new Text(
-                'Hello Imooc',
-                style: TextStyle(fontSize: 40.0),
+    const linearGradient = const LinearGradient(
+                      colors: [
+                        Colors.lightBlue,
+                        Colors.greenAccent,
+                        Colors.purple
+                      ]);
+        return MaterialApp(
+            title: 'TextWidget',
+            home: Scaffold(
+                appBar: AppBar(
+                  title: Text('TextWidget'),
+                ),
+                body: Center(
+                    child: Container(
+                  child: new Text(
+                    'Hello Imooc',
+                    style: TextStyle(fontSize: 40.0),
+                  ),
+                  alignment: Alignment.topLeft,
+                  width: 500.0,
+                  height: 400.0,
+                  // color: Colors.lightBlue,
+                  margin: const EdgeInsets.all(10.0),
+                  decoration: new BoxDecoration(
+                    gradient: linearGradient
               ),
-              alignment: Alignment.center,
-              width: 500.0,
-              height: 400.0,
-              color: Colors.lightBlue
-            ))));
+            )
+            )));
   }
 }
