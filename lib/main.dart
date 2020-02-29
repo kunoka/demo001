@@ -11,7 +11,19 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('电影海报实例')
         ),
-        body: Text('电影海报实例')
+        body: GridView.count(
+          padding: const EdgeInsets.all(10.0),
+          crossAxisSpacing: 10.0,
+          crossAxisCount: 3,
+          children: <Widget>[
+            const Text('I love IMooc!'),
+            const Text('I love IMooc!'),
+            const Text('I love IMooc!'),
+            const Text('I love IMooc!'),
+            const Text('I love IMooc!'),
+            const Text('I love IMooc!'),
+          ],
+        )
       )
       );
   }
